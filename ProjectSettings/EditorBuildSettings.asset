@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start Menu.unity
+    guid: 8fe917b7c001dbf489b17bee2512e819
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 5ebbd91888e178e42a6471ea7459e174
+  - enabled: 1
+    path: Assets/Scenes/End Menu.unity
+    guid: 793f9415e91da35488cb12a7ae14e659
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7690326d4f8d0f946afb0d03d6d64177, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 72d5d635152607e4b954d6c397ea0cc9, type: 2}
