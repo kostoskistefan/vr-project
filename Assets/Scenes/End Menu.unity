@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 537995040}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: UI Button
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 948614890}
   m_Layer: 5
   m_Name: Text
-  m_TagString: UI Button
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 1024491878}
   m_Layer: 5
   m_Name: Text
-  m_TagString: UI Button
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -939,12 +939,11 @@ GameObject:
   - component: {fileID: 1061002594}
   - component: {fileID: 1061002593}
   - component: {fileID: 1061002592}
-  - component: {fileID: 1061002591}
   - component: {fileID: 1061002590}
   - component: {fileID: 1061002589}
   m_Layer: 0
   m_Name: Play Button
-  m_TagString: UI Button
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1005,21 +1004,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 979a46b2579ca2646885b1881a8b8a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1061002591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061002587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dbb393676371e14fbe1c214aebef531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1906742716}
-  durationInSeconds: 2
-  interactionTag: UI Button
 --- !u!65 &1061002592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1094,12 +1078,11 @@ GameObject:
   - component: {fileID: 1444987594}
   - component: {fileID: 1444987593}
   - component: {fileID: 1444987592}
-  - component: {fileID: 1444987591}
   - component: {fileID: 1444987590}
   - component: {fileID: 1444987589}
   m_Layer: 0
   m_Name: Exit Button
-  m_TagString: UI Button
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1160,21 +1143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1e9d4d206eb53479aad5142b4597b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1444987591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1444987587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dbb393676371e14fbe1c214aebef531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1906742716}
-  durationInSeconds: 2
-  interactionTag: UI Button
 --- !u!65 &1444987592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1362,7 +1330,7 @@ GameObject:
   - component: {fileID: 1761158124}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: UI Button
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1457,6 +1425,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1906742717}
+  - component: {fileID: 1906742718}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1479,6 +1448,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1906742718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906742716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790c92cb7e8608c47a9ab52bfc9138ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2134078669
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class Teleporter : MonoBehaviour
     
     public void TeleportPlayer()
     {
-        player.transform.position = GazeInteraction.currentObject.transform.position;
-        player.transform.rotation = GazeInteraction.currentObject.transform.rotation;
+        player.transform.position = Interactor.currentObject.transform.position;
+        player.transform.rotation = Interactor.currentObject.transform.rotation;
     }
 }
