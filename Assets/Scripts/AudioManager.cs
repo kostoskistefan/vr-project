@@ -5,32 +5,45 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public List<GameObject> instruments;
+    public static int latestTimeSample;
+    public static int maxSamples;
+
+    void OnEnable()
+    {
+        latestTimeSample = 0;
+        maxSamples = instruments[0].GetComponent<AudioSource>().clip.samples;
+    } 
 
     void Update()
     {
-        int lastTimeSamples = GetLatestTimeSamples();
+        GetLatestTimeSample();
 
         foreach (GameObject instrument in instruments)
         {
             AudioSource audio = instrument.GetComponent<AudioSource>();
             
-            audio.timeSamples = lastTimeSamples;
+            audio.timeSamples = latestTimeSample;
+
+            if (latestTimeSample >= maxSamples - 1)
+            {
+                audio.timeSamples = 0;
+                audio.Stop();
+            }
         }
     }
 
-    private int GetLatestTimeSamples()
+    private void GetLatestTimeSample()
     {
-        int lastTimeSamples = 0;
-
         foreach (GameObject instrument in instruments)
         {
             AudioSource audio = instrument.GetComponent<AudioSource>();
 
-            if (audio.timeSamples > lastTimeSamples)
-                lastTimeSamples = audio.timeSamples;
+            if (audio.timeSamples > latestTimeSample)
+                latestTimeSample = audio.timeSamples;
         }
 
-        return lastTimeSamples;
+        if (latestTimeSample >= maxSamples)
+            latestTimeSample = maxSamples - 1;
     }
 
     public void PlayInstrument(GameObject instrument)

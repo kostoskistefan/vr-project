@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class AudioParticleSystem : MonoBehaviour
 {
-    public void ToggleParticleSystem()
+    private AudioSource audioSource;
+    private ParticleSystem particleSystemObject;
+
+    void Start()
     {
-        AudioSource audio = gameObject.GetComponent<AudioSource>();
-        ParticleSystem particleSystem = gameObject.GetComponentInChildren<ParticleSystem>();
+        audioSource = GetComponent<AudioSource>();
+        particleSystemObject = GetComponentInChildren<ParticleSystem>();
+    }
 
-        if (audio.isPlaying)
-            particleSystem.Play();
+    void Update()
+    {
+        if (audioSource.isPlaying)
+            particleSystemObject.Play();
 
-        else particleSystem.Stop();
+        else particleSystemObject.Stop();
     }
 }
